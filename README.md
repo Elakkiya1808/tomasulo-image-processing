@@ -1,69 +1,47 @@
 # Tomasulo-Based Instruction Scheduling for Image Processing
 
-## Overview
-This mini-project combines a real image-processing interface with an educational
-Tomasulo-style instruction scheduling simulator.
+## Project Overview
 
-The image pipeline performs grayscale conversion, brightness adjustment, edge
-detection, or sharpening. A separate instruction generator creates representative
-floating-point arithmetic instructions for a configurable number of image tiles.
-The scheduler models in-order issue, register renaming, reservation stations,
-functional-unit availability, out-of-order execution, and one CDB broadcast per
-cycle.
+This project demonstrates Tomasulo's dynamic instruction scheduling algorithm using image processing workloads.
 
-## Important scope note
-The arithmetic instruction trace is representative and tile-level; it is not
-captured from the native machine instructions executed by Pillow or NumPy. The
-cycle comparison is against a deliberately serial baseline and is not a measured
-CPU speedup.
+It combines image processing operations with a software-based processor simulation to demonstrate instruction issue, out-of-order execution, reservation stations, register renaming, and result writeback.
 
-## Files
-- `app.py`: Streamlit user interface and result visualizations
-- `image_processor.py`: real image-processing operations
-- `instruction_generator.py`: tile-level instruction trace and input registers
-- `tomasulo.py`: Tomasulo-style scheduling model
-- `baseline.py`: serial baseline for the same instruction trace
-- `requirements.txt`: Python dependencies
+## Objectives
 
-## Installation
-Use Python 3.10 or later. In a terminal, navigate to this folder and run:
+- Implement Tomasulo-based dynamic instruction scheduling.
+- Generate representative instructions for image processing operations.
+- Demonstrate reservation station allocation and operand dependency tracking.
+- Analyse instruction execution and result writeback cycles.
+- Compare simulated performance with a baseline execution model.
 
-```bash
-python -m venv .venv
-```
+## Technologies Used
 
-Activate the environment.
+- Python
+- Flask
+- HTML, CSS and JavaScript
+- Pillow
+- Chart.js
 
-Windows:
-```bash
-.venv\Scripts\activate
-```
+## Features
 
-macOS/Linux:
-```bash
-source .venv/bin/activate
-```
+- Image upload and processing
+- Image transformation operations
+- Instruction generation
+- Tomasulo scheduling simulation
+- Reservation station monitoring
+- Instruction execution timeline
+- Performance analysis
 
-Install dependencies:
-```bash
-pip install -r requirements.txt
-```
+## How to Run
 
-Launch:
-```bash
-streamlit run app.py
-```
+1. Clone the repository.
+2. Install the required dependencies:
 
-## How to use
-1. Upload a PNG, JPG, JPEG, or BMP image.
-2. Select an image operation.
-3. Choose the number of representative tiles.
-4. Click **Run scheduling experiment**.
-5. Compare cycle counts and inspect the instruction timeline, station table,
-   event log, and downloadable CSV.
+   `pip install -r requirements.txt`
 
-## Limitations
-This is a teaching model, not a full processor implementation. It does not model
-branch prediction, reorder buffers, precise exceptions, memory hierarchy, cache
-misses, vector/SIMD instructions, or native CPU timing. Functional-unit
-latencies and counts are configurable in `TomasuloSimulator`.
+3. Start the application using the appropriate Flask command for the project.
+4. Open the local application URL displayed in the terminal.
+
+## Project Type
+
+Academic Mini-Project – Advanced Computer Organization and Architecture (ACOA)
