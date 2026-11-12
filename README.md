@@ -1,6 +1,6 @@
-<img width="320" height="320" alt="image" src="https://github.com/user-attachments/assets/5acdfc12-2e41-4656-8d19-d75dbdcce49e" /># Tomasulo-Based Instruction Scheduling for Image Processing
+# Tomasulo-Based Instruction Scheduling for Image Processing
 
-##Live Demo :
+**#Live Demo :**
 https://tomasulo-image-processing.onrender.com
 
 ## Project Overview
